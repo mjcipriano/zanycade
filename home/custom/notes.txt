@@ -1,0 +1,2 @@
+sudo pip3 install adafruit-circuitpython-pca9685
+sudo pip3 install adafruit-circuitpython-servokit

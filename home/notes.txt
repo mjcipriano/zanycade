@@ -1,0 +1,4 @@
+sudo -u pi bash /home/pi/RetroPie/retropiemenu/bezelproject.sh
+
+
+/opt/retropie/supplementary/skyscraper/Skyscraper -p pc -i /home/pi/RetroPie/roms/moonlight -s thegamesdb

@@ -1,0 +1,4 @@
+gpio -x sr595:100:32:12:14:10 write 100 0
+
+for PIN in {1..41}; do sudo gpio -x sr595:100:32:12:14:10 write 100 $(($PIN % 2)); done
+for PIN in {100..132}; do sudo gpio -x sr595:100:32:12:14:10 write $PIN 1;done
