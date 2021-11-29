@@ -33,6 +33,39 @@ Go to:
 
 ```
 
+NOTE: After running, I had to edit the /opt/retropie/configs/godot-engine/emulators.cfg file to remove the "--resolution x" line.
+
+
+
+```bash
+pi@zanycade:~/RetroPie/roms/godot-engine $ more override.cfg
+
+[audio]
+mix_rate=44100
+output_latency=15
+pi@zanycade:~/Retro
+
+##############################
+
+pi@zanycade:~/RetroPie/roms/godot-engine $ more settings/godot-engine-settings.cfg
+# Settings for the godot-engine system (v1.8.1)
+
+gpio_virtual_keyboard = ""
+kms_drm_driver = ""
+audio_driver = "ALSA"
+video_driver = "GLES2"
+#################################
+
+pi@zanycade:~/RetroPie/roms/godot-engine $ more /opt/retropie/configs/godot-engine/emulators.cfg
+godot-engine-2.1.6 = "FRT_X11_UNDECORATED=true   /opt/retropie/emulators/godot-engine/frt_2.1.6_pi2.bin -main_pack %ROM% -ad ALSA -vd GLES2 --frt exit_on_shiftenter=true"
+godot-engine-3.0.6 = "FRT_X11_UNDECORATED=true   /opt/retropie/emulators/godot-engine/frt_3.0.6_pi2.bin --main-pack %ROM% --audio-driver ALSA --video-driver GLES2 --frt exit_on_shiftenter=true"
+godot-engine-3.1.2 = "FRT_X11_UNDECORATED=true   /opt/retropie/emulators/godot-engine/frt_3.1.2_pi2.bin --main-pack %ROM% --audio-driver ALSA --video-driver GLES2 --frt exit_on_shiftenter=true"
+godot-engine-3.3.4 = "FRT_X11_UNDECORATED=true   /opt/retropie/emulators/godot-engine/frt_3.3.4_pi2.bin --main-pack %ROM% --audio-driver ALSA --video-driver GLES2 --frt exit_on_shiftenter=true"
+godot-engine-3.4 = "FRT_X11_UNDECORATED=true   /opt/retropie/emulators/godot-engine/frt_3.4_pi2.bin --main-pack %ROM% --audio-driver ALSA --video-driver GLES2 --frt exit_on_shiftenter=true"
+default = "godot-engine-3.4"
+
+
+```
 https://github.com/hiulit/RetroPie-Godot-Engine-Emulator
 
 
